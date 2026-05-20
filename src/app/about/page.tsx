@@ -165,15 +165,27 @@ export default function AboutPage() {
           <br />
           about construction technology in Africa.
         </p>
-        <a
-          href="mailto:hello@busayomi.dev"
-          className="inline-block text-[14px] text-ink tracking-[.04em] border-b border-ink pb-0.5 mb-5"
-        >
-          hello@busayomi.dev
-        </a>
+        <section className="mb-8">
+          <div className="flex flex-col gap-3 justify-center items-center">
+            <a
+              href="mailto:busayoadebayo280@gmail.com"
+              className="text-[14px] text-ink tracking-[.04em] border-b border-ink pb-0.5"
+            >
+              busayoadebayo280@gmail.com
+            </a>
+            <a
+              href="https://wa.me/2347065687524"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[14px] text-ink tracking-[.04em] border-b border-ink pb-0.5"
+            >
+              WhatsApp: +234 706 568 7524
+            </a>
+          </div>
+        </section>
         <div className="flex justify-center gap-6">
           <a
-            href="https://github.com/"
+            href="https://github.com/busayo-comfort"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[12px] tracking-[.08em] uppercase text-ink-muted"
@@ -181,7 +193,7 @@ export default function AboutPage() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/"
+            href="https://www.linkedin.com/in/busayo-adebayo-2a9a99306/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[12px] tracking-[.08em] uppercase text-ink-muted"
@@ -189,7 +201,7 @@ export default function AboutPage() {
             LinkedIn
           </a>
           <a
-            href="https://twitter.com/"
+            href="https://twitter.com/busayo_adebayo"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[12px] tracking-[.08em] uppercase text-ink-muted"

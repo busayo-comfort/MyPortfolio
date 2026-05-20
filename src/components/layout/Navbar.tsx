@@ -17,7 +17,7 @@ const Navbar = () => {
             {["WORK", "ABOUT", "CONTACT"].map((item) => (
               <a
                 key={item}
-                href={item === "WORK" ? "#work" : item === "ABOUT" ? "/about" : "/contact"}
+                href={item === "WORK" ? "#work" : item === "ABOUT" ? "/about" : "/about#contact"}
                 className="text-[0.78rem] tracking-[0.18em] text-[#6B6B6B] transition hover:text-[#1A1A1A]"
               >
                 {item}

@@ -154,7 +154,7 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className="bg-cream px-8 py-13 text-center">
+      <div id="contact" className="bg-cream px-8 py-13 text-center">
         <h2 className="font-serif text-[26px] text-ink font-normal mb-2.5">
           If you&apos;re building something that matters,
           <br />

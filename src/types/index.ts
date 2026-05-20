@@ -1,29 +1,27 @@
-export type ProjectStatus = "completed" | "ongoing" | "archived";
+export type ProjectStatus = 'completed' | 'ongoing'
+
+export type ProjectCategory =
+  | 'fullstack'
+  | 'api-integration'
+  | 'frontend'
+  | 'clone'
+  | 'collaborative'
 
 export type Project = {
-  slug: string;
-  name: string;
-  tagline: string;               
-
-  problemStatement: string;      
-  motivation: string;            
-  whatItAchieves: string;        
-
-  description: string;           
-  learnings: string[];           
-
-  status: ProjectStatus;
-  isHighlight: boolean;          // True only for Contract Shield
-
-  tech: string[];
-  image: string;                 
-  logo?: string;
-
+  slug: string
+  name: string
+  tagline: string
+  problemStatement: string
+  motivation: string
+  whatItAchieves: string
+  learnings: string[]
+  status: ProjectStatus
+  isHighlight: boolean
+  tech: string[]
+  image: string
   links: {
-    github?: string;
-    live?: string;
-    demo?: string;
-  };
-
-  category: "fullstack" | "frontend" | "backend" | "ai" | "clone";
-};
+    github?: string
+    live?: string
+  }
+  category: ProjectCategory
+}

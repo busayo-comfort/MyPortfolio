@@ -2,47 +2,27 @@
 
 import Link from "next/link";
 import { highlightedProject, otherProjects } from "@/data/projects";
+import Navbar from "@/components/layout/Navbar";
 
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#F5F0EB] text-[#1A1A1A]">
       {/* NAVBAR */}
-      <header className="border-b border-[#E8E2DB]">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
-          <Link
-            href="/"
-            className="font-serif text-[2rem] font-bold tracking-[-0.04em]"
-          >
-            Busayomi.
-          </Link>
-
-          <nav className="hidden items-center gap-10 md:flex">
-            {["WORK", "ABOUT", "CONTACT"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
-                className="text-[0.78rem] tracking-[0.18em] text-[#6B6B6B] transition hover:text-[#1A1A1A]"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       {/* HERO */}
-      <section className="border-b border-[#E8E2DB]">
+      <section className="flex border-b border-[#E8E2DB]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
           <p className="mb-10 text-[0.78rem] tracking-[0.22em] text-[#6B6B6B]">
-            FULL-STACK DEVELOPER · LAGOS, NIGERIA
+            FULL-STACK DEVELOPER · IBADAN, NIGERIA
           </p>
 
           <div className="max-w-4xl">
-            <h1 className="font-serif text-[3.3rem] leading-[1.04] tracking-[-0.05em] md:text-[5.4rem]">
+            <h1 className="font-serif text-[2.3rem] leading-[1.04] tracking-tighter[-0.05em] md:text-[.2rem]">
               Building systems for markets that actually matter.
             </h1>
 
-            <p className="mt-10 max-w-2xl text-[1.1rem] leading-[2rem] text-[#6B6B6B]">
+            <p className="mt-10 max-w-2xl text-[1.1rem] leading-8[2rem] text-[#6B6B6B]">
               I architect full-stack products end-to-end — from marketplace
               infrastructure to real-time systems. Currently building toward
               construction technology for Africa.
@@ -64,6 +44,10 @@ export default function HomePage() {
               </a>
             </div>
           </div>
+        </div>
+        <div className="w-[70%] h-[80vh] side-img">
+          <img className="w-full h-full object-contain"  src="/personal-image.png" alt="Personal Image" />
+
         </div>
       </section>
 
@@ -115,7 +99,7 @@ export default function HomePage() {
 
               {/* PREVIEW */}
               <div className="flex items-center justify-center">
-                <div className="flex h-[320px] w-full max-w-[420px] items-center justify-center bg-[#F5F0EB]">
+                <div className="flex h-[80] w-full max-w-[105] items-center justify-center bg-[#F5F0EB]">
                   <div className="text-center">
                     <p className="font-serif text-6xl font-bold text-[#D0C4B8]">
                       CS
@@ -157,10 +141,18 @@ export default function HomePage() {
                 </div>
 
                 {/* THUMBNAIL */}
-                <div className="flex h-[180px] items-center justify-center bg-[#F5F0EB]">
-                  <span className="font-serif text-4xl font-semibold text-[#CFC3B7]">
-                    {project.name}
-                  </span>
+                <div className="flex h-[150] items-center justify-center bg-[#F5F0EB]">
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="h-full w-full object-contain"
+                    />
+                  ) : (
+                    <span className="font-serif text-4xl font-semibold text-[#CFC3B7]">
+                      {project.name}
+                    </span>
+                  )}
                 </div>
 
                 <div className="mt-8">
@@ -169,7 +161,7 @@ export default function HomePage() {
                   </h3>
 
                   <p className="mt-4 text-lg leading-8 text-[#6B6B6B]">
-                    {project.description}
+                    {project.problemStatement}
                   </p>
 
                   <div className="mt-10 flex justify-end text-2xl text-[#B8B0A8] transition group-hover:translate-x-1">
@@ -183,28 +175,7 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer
-        id="contact"
-        className="border-t border-[#E8E2DB]"
-      >
-        <div className="mx-auto flex max-w-7xl flex-col gap-8 px-6 py-10 md:flex-row md:items-center md:justify-between md:px-10">
-          <h3 className="font-serif text-3xl font-bold tracking-[-0.04em]">
-            Busayomi.
-          </h3>
-
-          <div className="flex gap-8 text-[#6B6B6B]">
-            <a href="https://github.com/busayo-the-programmer">
-              GitHub
-            </a>
-
-            <a href="#">LinkedIn</a>
-
-            <a href="#">Twitter</a>
-          </div>
-
-          <p className="text-[#B8B0A8]">© 2026</p>
-        </div>
-      </footer>
+     
     </main>
   );
 }

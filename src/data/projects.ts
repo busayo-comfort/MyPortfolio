@@ -1,193 +1,188 @@
-import { Project } from "@/types";
+import type { Project } from '@/types'
 
 export const projects: Project[] = [
   {
-    slug: "contract-shield",
-    name: "Contract Shield",
-    tagline: "Legal protection tooling for freelancers and contractors",
+    slug: 'contract-shield',
+    name: 'Contract Shield',
+    tagline: 'Legal protection tooling for freelancers and contractors in Nigeria.',
     problemStatement:
-      "Freelancers in Nigeria routinely take on work without enforceable agreements, leaving them exposed to scope creep, late payment, and disputes with no legal recourse.",
+      'Freelancers in Nigeria routinely take on work without enforceable agreements — leaving them exposed to scope creep, late payment, and disputes with no legal recourse. Ad hoc WhatsApp agreements do not hold up.',
     motivation:
-      "Collaborating on this with Marvel to understand how software can reduce real legal risk — not just automate forms but structure agreements that actually hold up.",
+      'Collaborating with Marvel on this taught me things tutorials never cover — onboarding cold into a live codebase, diagnosing missing dependencies before writing a line, and structuring legal logic as flows that real people will actually complete.',
     whatItAchieves:
-      "Gives contractors a guided flow to generate, review, and store enforceable contracts — reducing reliance on ad hoc WhatsApp agreements.",
-    description:
-      "A Next.js collaborative project focused on simplifying contract generation and management for independent contractors and small agencies.",
+      'Gives contractors a guided flow to generate, review, and store enforceable contracts — reducing reliance on informal agreements and making legal protection the path of least resistance.',
     learnings: [
-      "Onboarding into an existing codebase from GitHub cold",
-      "Understanding missing lib/ and env dependencies before writing any code",
-      "Structuring legal logic as user-facing flows",
+      'Onboarding into a live Next.js codebase from GitHub cold',
+      'Diagnosing missing lib/ directory and .env.local keys before writing code',
+      'Structuring legal logic as guided, user-friendly flows',
+      'Collaborative architecture decisions across a shared codebase',
     ],
-    status: "ongoing",
+    status: 'ongoing',
     isHighlight: true,
-    tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    image: "/projects/contract-shield.png",
+    tech: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    image: '/contract-shield.png',
     links: {
-      github: "",
+      github: '',
     },
-    category: "fullstack",
+    category: 'collaborative',
   },
   {
-    slug: "vendora",
-    name: "Vendora",
-    tagline: "A full-stack multi-vendor e-commerce marketplace",
+    slug: 'vendora',
+    name: 'Vendora',
+    tagline: 'A full-stack multi-vendor marketplace with analytics, notifications, and payments.',
     problemStatement:
-      "Most e-commerce starter projects only cover the buyer side. Building a platform that handles multiple vendor storefronts, inventories, and payouts in one system requires a fundamentally different architecture.",
+      'Most e-commerce projects only cover the buyer side. Building a platform that handles multiple vendor storefronts, separate inventories, and payouts in one system requires a fundamentally different architecture.',
     motivation:
-      "Wanted to go beyond a basic CRUD store and understand what production marketplace architecture actually looks like — vendor isolation, analytics, notifications, and payment splits.",
+      'I wanted to go beyond a basic CRUD store and understand what production marketplace architecture actually looks like — vendor isolation, real analytics, notification systems, and payment splits. Every major decision was intentional.',
     whatItAchieves:
-      "A working marketplace with vendor dashboards, product management, cart/wishlist, real analytics, and Paystack payment integration.",
-    description:
-      "Full-stack marketplace built with Next.js frontend and Node/Express + MongoDB backend. Includes TanStack Query, Chart.js analytics, and a notification system.",
+      'A working marketplace with vendor dashboards, product management, cart and wishlist, real Chart.js analytics wired to live backend data, a Mongoose notification system, and Paystack payment integration.',
     learnings: [
-      "TanStack Query cache invalidation at scale",
-      "Migrating client state (cart/wishlist) to server-side MongoDB",
-      "Debugging MongoDB URI connection issues in production-like environments",
-      "Chart.js with named npm imports to avoid CDN/scale registration bugs",
+      'TanStack Query cache invalidation at scale with useMutation and useQuery',
+      'Migrating cart and wishlist state from localStorage to server-side MongoDB',
+      'Fixing a Vercel MIME type deployment error by switching from routes to rewrites',
+      'Chart.js named imports to avoid scale registration bugs in React Strict Mode',
+      'Building a full notifications system — Mongoose model, controllers, frontend hook with dayjs',
     ],
-    status: "completed",
+    status: 'completed',
     isHighlight: false,
-    tech: ["Next.js", "Node.js", "Express", "MongoDB", "TanStack Query", "Chart.js", "Tailwind CSS"],
-    image: "/projects/vendora.png",
+    tech: ['React', 'Vite', 'Node.js', 'Express', 'MongoDB', 'TanStack Query', 'Chart.js', 'Tailwind CSS'],
+    image: '/vendora.png',
     links: {
-      github: "",
-      live: "",
+      github: 'https://github.com/busayo-comfort/Shoply',
+      live: 'https://vendora-eight-beta.vercel.app/',
     },
-    category: "fullstack",
+    category: 'fullstack',
   },
   {
-    slug: "threadly",
-    name: "Threadly",
-    tagline: "A real-time chat application with persistent rooms",
+    slug: 'threadly',
+    name: 'Threadly',
+    tagline: 'A real-time chat application with persistent rooms, built as a monorepo.',
     problemStatement:
-      "Most chat app tutorials stop at basic Socket.io messaging. Understanding how to structure a production chat system — message persistence, room state, auth — requires going much further.",
+      'Most chat app tutorials stop at basic Socket.io messaging. Understanding how to structure a production chat system — message persistence, room state, auth, and a clean separation of concerns — requires going much further.',
     motivation:
-      "Level 4 school project, built as a monorepo with a clear separation between the Next.js frontend API and the dedicated Socket.io server — deliberately structured to reflect real production patterns.",
+      'Built as a Level 4 academic project, I deliberately structured it as a monorepo with a clear split between the Next.js REST API and the dedicated Socket.io server — not because the brief required it, but because that is how it would look in production.',
     whatItAchieves:
-      "Real-time group messaging with room creation, persistent message history, and user authentication across a monorepo architecture.",
-    description:
-      "Monorepo chat app with a Next.js frontend (REST API) and a separate Node/Express + Socket.io server. Built as a Level 4 academic project.",
+      'Real-time group messaging with room creation, persistent message history, and user authentication across a clean monorepo architecture.',
     learnings: [
-      "Monorepo structuring for fullstack projects",
-      "Socket.io room management and event architecture",
-      "Separating REST from WebSocket concerns cleanly",
+      'Monorepo structuring for full-stack Next.js and Node projects',
+      'Socket.io room management and event architecture',
+      'Separating REST concerns from WebSocket concerns cleanly',
+      'Managing persistent message state across reconnections',
     ],
-    status: "completed",
+    status: 'completed',
     isHighlight: false,
-    tech: ["Next.js", "Node.js", "Express", "Socket.io", "MongoDB"],
-    image: "/projects/threadly.png",
+    tech: ['Next.js', 'Node.js', 'Express', 'Socket.io', 'MongoDB'],
+    image: '/threadly.png',
     links: {
-      github: "",
+      github: 'https://github.com/busayo-comfort/Threadly',
+      live: 'https://threadly-steel.vercel.app',
     },
-    category: "fullstack",
+    category: 'fullstack',
   },
   {
-    slug: "oau-portal-clone",
-    name: "OAU School Portal Clone",
-    tagline: "A replica of the OAU student portal, rebuilt in Django",
+    slug: 'vision-ui-dashboard',
+    name: 'Vision UI Dashboard',
+    tagline: 'Modern analytics dashboard with rich charts and a responsive admin UI.',
     problemStatement:
-      "The original portal is poorly structured and unreliable. Cloning it was a deliberate exercise to learn how Python/Django handles authentication, sessions, and form-heavy admin systems.",
+      'Building dashboards that feel smooth, scalable, and information-dense requires careful component structure, responsive layouts, and clean state organisation — skills that only come from building one end-to-end.',
     motivation:
-      "Chose a system I already understood as a user so I could focus on the engineering challenge — replicating real portal logic in a new stack rather than designing from scratch.",
+      'I wanted to practice building a production-style admin dashboard with reusable UI components, chart visualisations, and the polished responsive patterns commonly used in SaaS platforms.',
     whatItAchieves:
-      "Working Django app with login, dashboard, course registration, and result viewing flows that mirror the real portal's structure.",
-    description:
-      "A Django-based clone of the Obafemi Awolowo University student portal, built to master Python backend development and Django's ORM and auth system.",
+      'An interactive dashboard interface with analytics cards, chart visualisations, responsive sidebar navigation, user overview sections, and a consistent dark-themed UI optimised for both desktop and mobile.',
     learnings: [
-      "Django ORM for relational data",
-      "Django's built-in auth and session management",
-      "Form handling and validation in Python",
-      "How to map an existing system's logic to a new stack",
+      'Building reusable dashboard UI components at scale',
+      'Structuring scalable layouts in React',
+      'Working with chart libraries and analytics visualisation',
+      'Creating responsive sidebar and navigation systems',
+      'Managing a consistent dark UI design system across components',
     ],
-    status: "completed",
+    status: 'completed',
     isHighlight: false,
-    tech: ["Python", "Django", "SQLite", "HTML/CSS"],
-    image: "/projects/oau-portal.png",
+    tech: ['React', 'TypeScript', 'Tailwind CSS', 'React Charts', 'Framer Motion'],
+    image: '/vision-ui.png',
     links: {
-      github: "",
+      github: '',
+      live: '',
     },
-    category: "backend",
+    category: 'frontend',
   },
   {
-    slug: "shoply",
-    name: "Shoply",
-    tagline: "A clean e-commerce frontend with cart and product management",
+    slug: 'oau-portal-clone',
+    name: 'OAU Portal Clone',
+    tagline: 'The OAU student portal rebuilt in Django to master Python backend architecture.',
     problemStatement:
-      "Needed a focused project to nail the fundamentals of React state management, hooks, and product flow before moving to a full-stack implementation.",
+      ' Cloning a system I already understood as a user let me focus entirely on the engineering challenge — mapping real portal logic to a new stack rather than designing from scratch.',
     motivation:
-      "Built as a stepping stone — deliberately scoped to frontend only so every architectural decision was about state, not backend plumbing.",
+      'I chose a system I used daily so I could measure correctness against lived experience. Every flow — login, course registration, result viewing — had a known expected output, which made Django\'s ORM and auth system much easier to reason about.',
     whatItAchieves:
-      "Functional storefront with product listing, filtering, cart management, and persistent state using custom hooks.",
-    description:
-      "React/Vite e-commerce frontend with product filtering, cart logic, and a clean component architecture.",
+      'A working Django application with login, dashboard, course registration, and result viewing flows that mirror the original portal\'s structure and logic.',
     learnings: [
-      "Custom hook design (useAddToCart, useWishlist)",
-      "Debugging accumulation logic and scope in hooks",
-      "Component architecture for e-commerce flows",
+      'Django ORM for relational data modelling',
+      'Django built-in auth and session management',
+      'Form handling and server-side validation in Python',
+      'Mapping an existing system\'s logic to a new stack',
     ],
-    status: "completed",
+    status: 'completed',
     isHighlight: false,
-    tech: ["React", "Vite", "Tailwind CSS", "JavaScript"],
-    image: "/projects/shoply.png",
+    tech: ['Python', 'Django', 'SQLite', 'HTML', 'CSS'],
+    image: '/oau.png',
     links: {
-      github: "",
-      live: "",
+      github: 'https://github.com/busayo-comfort/OAU',
     },
-    category: "frontend",
+    category: 'clone',
   },
   {
-    slug: "amazon-clone",
-    name: "Amazon Clone",
-    tagline: "Frontend replica of Amazon's core shopping experience",
+    slug: 'recipe-finder',
+    name: 'Recipe Finder',
+    tagline: 'Search and save recipes via a public food API with full async state handling.',
     problemStatement:
-      "Reverse-engineering a product used by millions is one of the fastest ways to understand design decisions and UI patterns that survive at scale.",
+      'Working with third-party APIs introduces a class of problems that internal state never does — rate limits, unpredictable data shapes, loading states, and error boundaries that need to degrade gracefully.',
     motivation:
-      "Intentional clone project — not to replicate branding, but to understand the information architecture, component hierarchy, and interaction patterns behind a high-traffic commerce site.",
+      'I deliberately chose a public API project to practice integrating external data cleanly into a React UI. The goal was not the feature, it was the pattern — building async flows that handle every possible state correctly.',
     whatItAchieves:
-      "Pixel-close replica of core Amazon pages with working cart state, product detail routing, and responsive layout.",
-    description:
-      "A frontend Amazon clone focusing on layout accuracy, component reuse, and cart state management.",
+      'A search-driven app that fetches, displays, and lets users save recipes from a public food API with proper loading, error, and empty state handling throughout.',
     learnings: [
-      "Breaking down complex layouts into composable components",
-      "Understanding information hierarchy in high-conversion UI",
+      'API integration patterns in React with fetch and async/await',
+      'Handling loading, error, and empty states as first-class UI concerns',
+      'Shaping and normalising external API data to match component contracts',
+      'Debouncing search inputs to avoid unnecessary API calls',
     ],
-    status: "completed",
+    status: 'completed',
     isHighlight: false,
-    tech: ["React", "Tailwind CSS"],
-    image: "/projects/amazon-clone.png",
+    tech: ['React', 'Tailwind CSS', 'REST API', 'JavaScript'],
+    image: '/recipe-finder.png',
     links: {
-      github: "",
+      github: 'https://github.com/busayo-comfort/Recipe-Finder-App',
+      live: 'https://recipe-finder-app-theta-three.vercel.app/',
     },
-    category: "clone",
+    category: 'api-integration',
   },
   {
-    slug: "recipe-finder",
-    name: "Recipe Finder",
-    tagline: "Search and save recipes using a public food API",
+    slug: 'amazon-clone',
+    name: 'Amazon Clone',
+    tagline: 'Amazon\'s core shopping experience reverse-engineered to study high-conversion UI.',
     problemStatement:
-      "Working with third-party APIs introduces a class of problems — rate limits, data shaping, loading states, error boundaries — that internal state never does.",
+      'Reverse-engineering a product used by hundreds of millions of people is one of the fastest ways to understand design decisions that survive at scale — information architecture, component hierarchy, and interaction patterns.',
     motivation:
-      "Deliberately chose a public API project to practice integrating external data cleanly into a React UI, with proper loading and error handling patterns.",
+      'This was an intentional deconstruction exercise. Not to replicate branding, but to understand why Amazon\'s layout makes the decisions it does — what drives a user from landing page to cart confirmation.',
     whatItAchieves:
-      "Search-driven app that fetches, displays, and lets users save recipes from a public food API with full loading and error state handling.",
-    description:
-      "React app powered by a public recipe API. Focuses on async data fetching, error boundaries, and a clean search-to-detail flow.",
+      'A pixel-close replica of core Amazon pages with working cart state, product detail routing, and a fully responsive layout.',
     learnings: [
-      "API integration patterns in React",
-      "Handling loading, error, and empty states gracefully",
-      "Shaping external API data to match your component contracts",
+      'Breaking down a complex, dense layout into composable components',
+      'Understanding information hierarchy in high-conversion commerce UI',
+      'Managing cart state across multiple product and listing pages',
     ],
-    status: "completed",
+    status: 'completed',
     isHighlight: false,
-    tech: ["React", "Tailwind CSS", "REST API"],
-    image: "/projects/recipe-finder.png",
+    tech: ['React', 'Tailwind CSS', 'JavaScript'],
+    image: '/projects/amazon-clone.png',
     links: {
-      github: "",
-      live: "",
+      github: 'https://github.com/busayo-comfort/amazon-project',
     },
-    category: "frontend",
+    category: 'clone',
   },
-];
+ 
+]
 
-export const highlightedProject = projects.find((p) => p.isHighlight);
-export const otherProjects = projects.filter((p) => !p.isHighlight);
+export const highlightedProject = projects.find(p => p.isHighlight)!
+export const otherProjects = projects.filter(p => !p.isHighlight)

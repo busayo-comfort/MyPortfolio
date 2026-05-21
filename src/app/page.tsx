@@ -18,7 +18,7 @@ export default function HomePage() {
           </p>
 
           <div className="max-w-4xl">
-            <h1 className="font-serif text-[2.3rem] leading-[1.04] tracking-tighter[-0.05em] md:text-[.2rem]">
+            <h1 className="font-serif text-[2.3rem] leading-[1.04] tracking-tighter[-0.05em] md:text-[3.2rem]">
               Building systems for markets that actually matter.
             </h1>
 

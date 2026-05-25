@@ -175,7 +175,7 @@ export const projects: Project[] = [
     status: 'completed',
     isHighlight: false,
     tech: ['React', 'Tailwind CSS', 'JavaScript'],
-    image: '/projects/amazon-clone.png',
+    image: '',
     links: {
       github: 'https://github.com/busayo-comfort/amazon-project',
     },

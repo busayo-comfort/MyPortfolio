@@ -11,7 +11,7 @@ export default function HomePage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="flex border-b border-[#E8E2DB]">
+      <section className="flex flex-col md:flex-row border-b border-[#E8E2DB]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
           <p className="mb-10 text-[0.78rem] tracking-[0.22em] text-[#6B6B6B]">
             FULL-STACK DEVELOPER · IBADAN, NIGERIA
@@ -45,7 +45,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="w-[70%] h-[80vh] side-img">
+        <div className=" hidden sm:block w-[70%] h-[80vh]  side-img">
           <img className="w-full h-full object-contain"  src="/personal-image.png" alt="Personal Image" />
 
         </div>
@@ -98,7 +98,7 @@ export default function HomePage() {
               </div>
 
               {/* PREVIEW */}
-              <div className="flex items-center justify-center">
+              <div className="hidden sm:flex items-center justify-center">
                 <div className="flex h-[80] w-full max-w-[105] items-center justify-center bg-[#F5F0EB]">
                   <div className="text-center">
                     <p className="font-serif text-6xl font-bold text-[#D0C4B8]">

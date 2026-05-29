@@ -75,7 +75,7 @@ export const projects: Project[] = [
     image: '/threadly.png',
     links: {
       github: 'https://github.com/busayo-comfort/Threadly',
-      live: 'https://threadly-steel.vercel.app',
+      live: 'https://threadly-e57k.onrender.com/',
     },
     category: 'fullstack',
   },

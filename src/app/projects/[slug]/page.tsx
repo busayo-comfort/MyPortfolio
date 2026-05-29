@@ -123,15 +123,17 @@ export default async function ProjectDetailPage({ params }: Props) {
             )}
           </div>
         </div>
+            {project.image ? 
+                    <img src={project.image} alt={project.name} className="aspect-4/3 object-cover" />
 
-        <div className="bg-cream-muted border border-cream-border aspect-4/3 flex flex-col items-center justify-center gap-2.5">
+            : <div className="bg-cream-muted border border-cream-border aspect-4/3 flex flex-col items-center justify-center gap-2.5">
           <span className="font-serif text-[48px] font-bold text-cream-placeholder tracking-[-2px]">
             {getInitials(project.name)}
           </span>
           <span className="text-[11px] tracking-widest uppercase text-cream-placeholder">
             Project Preview
           </span>
-        </div>
+        </div>}
       </section>
 
       <section className="px-8 py-13 grid grid-cols-[1.4fr_.6fr] gap-13 items-start border-b border-cream-border">

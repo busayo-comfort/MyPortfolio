@@ -9,10 +9,10 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#F5F0EB] text-[#1A1A1A]">
       {/* NAVBAR */}
-     <div className="fixed top-0 left-0 right-0 z-50"> <Navbar /> </div>
+     <div className="fixed top-0 left-0 right-0 z-50 bg-[#F5F0EB]"> <Navbar /> </div>
 
       {/* HERO */}
-      <section className=" mt-8  flex flex-col md:flex-row border-b border-[#E8E2DB]">
+      <section className=" mt-18  flex flex-col md:flex-row border-b border-[#E8E2DB]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
           <p className="mb-10 text-[0.78rem] tracking-[0.22em] text-[#6B6B6B]">
             FULL-STACK DEVELOPER · IBADAN, NIGERIA

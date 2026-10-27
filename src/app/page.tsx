@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-[#F5F0EB] text-[#1A1A1A]">
       {/* NAVBAR */}
-      <Navbar />
+     <div className="fixed top-0 left-0 right-0 z-50"> <Navbar /> </div>
 
       {/* HERO */}
       <section className="flex flex-col md:flex-row border-b border-[#E8E2DB]">

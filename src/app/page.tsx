@@ -12,7 +12,7 @@ export default function HomePage() {
      <div className="fixed top-0 left-0 right-0 z-50"> <Navbar /> </div>
 
       {/* HERO */}
-      <section className="flex flex-col md:flex-row border-b border-[#E8E2DB]">
+      <section className=" mt-8  flex flex-col md:flex-row border-b border-[#E8E2DB]">
         <div className="mx-auto max-w-7xl px-6 py-24 md:px-10 md:py-32">
           <p className="mb-10 text-[0.78rem] tracking-[0.22em] text-[#6B6B6B]">
             FULL-STACK DEVELOPER · IBADAN, NIGERIA
